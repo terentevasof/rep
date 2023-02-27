@@ -96,7 +96,7 @@ IncludeTemplateLangFile(__FILE__);
 
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active">
-                  <a href="index.html">Home1</a>
+                  <a href="index.html">Home</a>
                 </li>
                 <li class="has-children">
                   <a href="properties.html">Properties</a>
