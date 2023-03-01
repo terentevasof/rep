@@ -1,52 +1,54 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
+  die(); ?>
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= LANGUAGE_ID ?>">
 
 <head>
-  <title><?$APPLICATION->ShowTitle()?></title>
-  <?$APPLICATION->ShowHead();?>
+  <title><? $APPLICATION->ShowTitle() ?></title>
+  <? $APPLICATION->ShowHead(); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
- 
-  <?php   
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/fonts/icomoon/style.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/bootstrap.min.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/magnific-popup.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/jquery-ui.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/owl.carousel.min.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/owl.theme.default.min.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/bootstrap-datepicker.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/mediaelementplayer.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/animate.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/fonts/flaticon/font/flaticon.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/fl-bigmug-line.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/aos.css");
 
-    use Bitrix\Main\Page\Asset;
+  <?php
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/fonts/icomoon/style.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/bootstrap.min.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/magnific-popup.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/jquery-ui.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/owl.carousel.min.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/owl.theme.default.min.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/bootstrap-datepicker.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/mediaelementplayer.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/animate.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/fonts/flaticon/font/flaticon.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/fl-bigmug-line.css");
+  $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/aos.css");
 
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popper.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/mediaelement-and-player.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.stellar.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.countdown.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.magnific-popup.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap-datepicker.min.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/aos.js");
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
-    ?>
+  use Bitrix\Main\Page\Asset;
+
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.3.1.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-migrate-3.0.1.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-ui.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popper.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/owl.carousel.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/mediaelement-and-player.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.stellar.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.countdown.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery.magnific-popup.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/bootstrap-datepicker.min.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/aos.js");
+  Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
+
+  ?>
 </head>
 
 <body>
-<?$APPLICATION->ShowPanel();?>
+  <? $APPLICATION->ShowPanel(); ?>
 
   <div class="site-loader"></div>
 
@@ -129,8 +131,8 @@ IncludeTemplateLangFile(__FILE__);
 
   <div class="slide-one-item home-slider owl-carousel">
 
-    <div class="site-blocks-cover" style="background-image: url(<?=SITE_TEMPLATE_PATH?>/images/hero_bg_1.jpg);" data-aos="fade"
-      data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover" style="background-image: url(<?= SITE_TEMPLATE_PATH ?>/images/hero_bg_1.jpg);"
+      data-aos="fade" data-stellar-background-ratio="0.5">
 
       <div class="text">
         <h2>853 S Lucerne Blvd</h2>
@@ -143,8 +145,8 @@ IncludeTemplateLangFile(__FILE__);
       </div>
     </div>
 
-    <div class="site-blocks-cover" style="background-image: url(<?=SITE_TEMPLATE_PATH?>/images/hero_bg_3.jpg);" data-aos="fade"
-      data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover" style="background-image: url(<?= SITE_TEMPLATE_PATH ?>/images/hero_bg_3.jpg);"
+      data-aos="fade" data-stellar-background-ratio="0.5">
 
       <div class="text">
         <h2>625 S. Berendo St</h2>
@@ -210,7 +212,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_1.jpg" alt="Image" class="img-fluid">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/images/img_1.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -244,7 +246,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_2.jpg" alt="Image" class="img-fluid">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/images/img_2.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -278,7 +280,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_3.jpg" alt="Image" class="img-fluid">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/images/img_3.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -313,7 +315,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_4.jpg" alt="Image" class="img-fluid">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/images/img_4.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -347,7 +349,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_5.jpg" alt="Image" class="img-fluid">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/images/img_5.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -381,7 +383,7 @@ IncludeTemplateLangFile(__FILE__);
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="property-details.html" class="prop-entry d-block">
             <figure>
-              <img src="<?=SITE_TEMPLATE_PATH?>/images/img_6.jpg" alt="Image" class="img-fluid">
+              <img src="<?= SITE_TEMPLATE_PATH ?>/images/img_6.jpg" alt="Image" class="img-fluid">
             </figure>
             <div class="prop-text">
               <div class="inner">
@@ -487,7 +489,7 @@ IncludeTemplateLangFile(__FILE__);
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
-          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/images/img_4.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="<?= SITE_TEMPLATE_PATH ?>/images/img_4.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
@@ -496,7 +498,7 @@ IncludeTemplateLangFile(__FILE__);
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/images/img_2.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="<?= SITE_TEMPLATE_PATH ?>/images/img_2.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
@@ -505,7 +507,7 @@ IncludeTemplateLangFile(__FILE__);
           </div>
         </div>
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
-          <a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/images/img_3.jpg" alt="Image" class="img-fluid"></a>
+          <a href="#"><img src="<?= SITE_TEMPLATE_PATH ?>/images/img_3.jpg" alt="Image" class="img-fluid"></a>
           <div class="p-4 bg-white">
             <span class="d-block text-secondary small text-uppercase">Jan 20th, 2019</span>
             <h2 class="h5 text-black mb-3"><a href="#">When To Sell &amp; How Much To Sell?</a></h2>
