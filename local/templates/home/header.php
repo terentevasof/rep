@@ -7,7 +7,9 @@ IncludeTemplateLangFile(__FILE__);
 <html lang="<?= LANGUAGE_ID ?>">
 
 <head>
-  <title><? $APPLICATION->ShowTitle() ?></title>
+  <title>
+    <? $APPLICATION->ShowTitle() ?>
+  </title>
   <? $APPLICATION->ShowHead(); ?>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -68,17 +70,38 @@ IncludeTemplateLangFile(__FILE__);
         <div class="row align-items-center">
           <div class="col-6 col-md-6">
             <p class="mb-0">
-              <a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span
-                  class="d-none d-md-inline-block ml-2">+2 102 3923 3922</span></a>
-              <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span
-                  class="d-none d-md-inline-block ml-2">info@domain.com</span></a>
+              <? $APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                array(
+                  "AREA_FILE_SHOW" => "file",
+                  "AREA_FILE_SUFFIX" => "inc",
+                  "EDIT_TEMPLATE" => "",
+                  "PATH" => "/include/phone.php"
+                )
+              ); ?>
+              <? $APPLICATION->IncludeComponent(
+                "bitrix:main.include",
+                "",
+                array(
+                  "AREA_FILE_SHOW" => "file",
+                  "AREA_FILE_SUFFIX" => "inc",
+                  "EDIT_TEMPLATE" => "",
+                  "PATH" => "/include/mail.php"
+                )
+              ); ?>
             </p>
           </div>
-          <div class="col-6 col-md-6 text-right">
-            <a href="#" class="mr-3"><span class="text-black icon-facebook"></span></a>
-            <a href="#" class="mr-3"><span class="text-black icon-twitter"></span></a>
-            <a href="#" class="mr-0"><span class="text-black icon-linkedin"></span></a>
-          </div>
+          <? $APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            array(
+              "AREA_FILE_SHOW" => "file",
+              "AREA_FILE_SUFFIX" => "inc",
+              "EDIT_TEMPLATE" => "",
+              "PATH" => "/include/social.php"
+            )
+          ); ?>
         </div>
       </div>
 
@@ -123,6 +146,27 @@ IncludeTemplateLangFile(__FILE__);
             </nav>
           </div>
 
+          <!--меню-->
+          <? $APPLICATION->IncludeComponent(
+            "bitrix:menu",
+            "",
+            array(
+              "ALLOW_MULTI_SELECT" => "N",
+              "CHILD_MENU_TYPE" => "left",
+              "DELAY" => "N",
+              "MAX_LEVEL" => "1",
+              "MENU_CACHE_GET_VARS" => array(""),
+              "MENU_CACHE_TIME" => "3600",
+              "MENU_CACHE_TYPE" => "N",
+              "MENU_CACHE_USE_GROUPS" => "Y",
+              "ROOT_MENU_TYPE" => "top",
+              "USE_EXT" => "N"
+            )
+          ); ?>
+
+
+
+
 
         </div>
       </div>
@@ -161,40 +205,67 @@ IncludeTemplateLangFile(__FILE__);
     </div>
 
   </div>
+  <!--лента новостей-->
+  <? $APPLICATION->IncludeComponent(
+    "bitrix:news.line",
+    "",
+    array(
+      "ACTIVE_DATE_FORMAT" => "d.m.Y",
+      "CACHE_GROUPS" => "Y",
+      "CACHE_TIME" => "300",
+      "CACHE_TYPE" => "A",
+      "DETAIL_URL" => "",
+      "FIELD_CODE" => array("", ""),
+      "IBLOCKS" => array("5"),
+      "IBLOCK_TYPE" => "ads",
+      "NEWS_COUNT" => "20",
+      "SORT_BY1" => "ACTIVE_FROM",
+      "SORT_BY2" => "SORT",
+      "SORT_ORDER1" => "DESC",
+      "SORT_ORDER2" => "ASC"
+    )
+  ); ?>
+
 
   <div class="py-5">
     <div class="container">
 
       <div class="row">
         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="feature d-flex align-items-start">
-            <span class="icon mr-3 flaticon-house"></span>
-            <div class="text">
-              <h2 class="mt-0">Wide Range of Properties</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
-              </p>
-            </div>
-          </div>
+          <? $APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            array(
+              "AREA_FILE_SHOW" => "file",
+              "AREA_FILE_SUFFIX" => "inc",
+              "EDIT_TEMPLATE" => "",
+              "PATH" => "/include/space1.php"
+            )
+          ); ?>
         </div>
         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="feature d-flex align-items-start">
-            <span class="icon mr-3 flaticon-rent"></span>
-            <div class="text">
-              <h2 class="mt-0">Rent or Sale</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
-              </p>
-            </div>
-          </div>
+          <? $APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            array(
+              "AREA_FILE_SHOW" => "file",
+              "AREA_FILE_SUFFIX" => "inc",
+              "EDIT_TEMPLATE" => "",
+              "PATH" => "/include/space2.php"
+            )
+          ); ?>
         </div>
         <div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
-          <div class="feature d-flex align-items-start">
-            <span class="icon mr-3 flaticon-location"></span>
-            <div class="text">
-              <h2 class="mt-0">Property Location</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem sint debitis porro quae dolorum neque.
-              </p>
-            </div>
-          </div>
+          <? $APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "",
+            array(
+              "AREA_FILE_SHOW" => "file",
+              "AREA_FILE_SUFFIX" => "inc",
+              "EDIT_TEMPLATE" => "",
+              "PATH" => "/include/space3.php"
+            )
+          ); ?>
         </div>
       </div>
     </div>
@@ -419,6 +490,26 @@ IncludeTemplateLangFile(__FILE__);
 
     </div>
   </div>
+  <!--лента новостей последние 9 -->
+  <? $APPLICATION->IncludeComponent(
+    "bitrix:news.line",
+    "",
+    array(
+      "ACTIVE_DATE_FORMAT" => "d.m.Y",
+      "CACHE_GROUPS" => "Y",
+      "CACHE_TIME" => "300",
+      "CACHE_TYPE" => "A",
+      "DETAIL_URL" => "",
+      "FIELD_CODE" => array("", ""),
+      "IBLOCKS" => array("5"),
+      "IBLOCK_TYPE" => "ads",
+      "NEWS_COUNT" => "9",
+      "SORT_BY1" => "ACTIVE_FROM",
+      "SORT_BY2" => "SORT",
+      "SORT_ORDER1" => "DESC",
+      "SORT_ORDER2" => "ASC"
+    )
+  ); ?>
 
   <div class="site-section">
     <div class="container">
@@ -477,6 +568,27 @@ IncludeTemplateLangFile(__FILE__);
       </div>
     </div>
   </div>
+  <!--сервисы-->
+  <? $APPLICATION->IncludeComponent(
+    "bitrix:news.line",
+    "",
+    array(
+      "ACTIVE_DATE_FORMAT" => "d.m.Y",
+      "CACHE_GROUPS" => "Y",
+      "CACHE_TIME" => "300",
+      "CACHE_TYPE" => "A",
+      "DETAIL_URL" => "",
+      "FIELD_CODE" => array("", ""),
+      "IBLOCKS" => array("6"),
+      "IBLOCK_TYPE" => "services",
+      "NEWS_COUNT" => "6",
+      "SORT_BY1" => "ACTIVE_FROM",
+      "SORT_BY2" => "SORT",
+      "SORT_ORDER1" => "DESC",
+      "SORT_ORDER2" => "ASC"
+    )
+  ); ?>
+
 
   <div class="site-section bg-light">
     <div class="container">
@@ -520,3 +632,23 @@ IncludeTemplateLangFile(__FILE__);
 
     </div>
   </div>
+  <!--3 последние новости-->
+  <? $APPLICATION->IncludeComponent(
+    "bitrix:news.line",
+    "",
+    array(
+      "ACTIVE_DATE_FORMAT" => "d.m.Y",
+      "CACHE_GROUPS" => "Y",
+      "CACHE_TIME" => "300",
+      "CACHE_TYPE" => "A",
+      "DETAIL_URL" => "",
+      "FIELD_CODE" => array("", ""),
+      "IBLOCKS" => array("1"),
+      "IBLOCK_TYPE" => "news",
+      "NEWS_COUNT" => "3",
+      "SORT_BY1" => "ACTIVE_FROM",
+      "SORT_BY2" => "SORT",
+      "SORT_ORDER1" => "DESC",
+      "SORT_ORDER2" => "ASC"
+    )
+  ); ?>
