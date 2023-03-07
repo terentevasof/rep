@@ -1,39 +1,39 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Home", 
+		"Главная", 
 		"index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Properties", 
-		"/properties/", 
+		"Объявления", 
+		"/ads/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Blog", 
-		"", 
+		"О сервисе", 
+		"/about-servise/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Contact", 
-		"/contacts/", 
+		"Продавец", 
+		"/seller/", 
 		Array(), 
 		Array(), 
-		"" 
+		"CSite::InGroup(array(1,7,8))" 
 	),
 	Array(
-		"About", 
-		"/about/", 
+		"Покупатель", 
+		"/shopper/", 
 		Array(), 
 		Array(), 
-		"" 
+		"CSite::InGroup(array(1,6,8))" 
 	)
 );
 ?>

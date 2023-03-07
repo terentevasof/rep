@@ -1,57 +1,36 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Home", 
-		"contacts/", 
+		"Главная", 
+		"/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Buy", 
-		"login/", 
+		"Объявления", 
+		"/ads/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Rent", 
-		"", 
+		"О сервисе", 
+		"/about-servise/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Properties", 
-		"", 
+		"Продавец", 
+		"/seller/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"About As", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Privacy Policy", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Contact Us", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Terms", 
-		"", 
+		"Покупатель", 
+		"/shopper/", 
 		Array(), 
 		Array(), 
 		"" 
