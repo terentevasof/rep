@@ -1,16 +1,57 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
 $aMenuLinks = Array(
 	Array(
-		"Контакты", 
+		"Home", 
 		"contacts/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Авторизация", 
+		"Buy", 
 		"login/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Rent", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Properties", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"About As", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Privacy Policy", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Contact Us", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Terms", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 

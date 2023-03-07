@@ -110,7 +110,7 @@ IncludeTemplateLangFile(__FILE__);
       <div class="container py-1">
         <div class="row align-items-center">
           <div class="col-8 col-md-8 col-lg-4">
-            <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong>HomeSpace<span
+            <h1 class=""><a href="/" class="h5 text-uppercase text-black"><strong>HomeSpace<span
                     class="text-danger">.</span></strong></a></h1>
           </div>
           <div class="col-4 col-md-4 col-lg-8">
@@ -119,51 +119,27 @@ IncludeTemplateLangFile(__FILE__);
               <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
                   class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-              <ul class="site-menu js-clone-nav d-none d-lg-block">
-                <li class="active">
-                  <a href="index.html">Home</a>
-                </li>
-                <li class="has-children">
-                  <a href="properties.html">Properties</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Buy</a></li>
-                    <li><a href="#">Rent</a></li>
-                    <li><a href="#">Lease</a></li>
-                    <li class="has-children">
-                      <a href="#">Menu</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
+                  <?$APPLICATION->IncludeComponent("bitrix:menu", "top_menu", Array(
+	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"MAX_LEVEL" => "3",	// Уровень вложенности меню
+		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+			0 => "",
+		),
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"MENU_THEME" => "site",
+		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+	),
+	false
+);?>
             </nav>
           </div>
 
-          <!--меню-->
-          <? $APPLICATION->IncludeComponent(
-            "bitrix:menu",
-            "",
-            array(
-              "ALLOW_MULTI_SELECT" => "N",
-              "CHILD_MENU_TYPE" => "left",
-              "DELAY" => "N",
-              "MAX_LEVEL" => "1",
-              "MENU_CACHE_GET_VARS" => array(""),
-              "MENU_CACHE_TIME" => "3600",
-              "MENU_CACHE_TYPE" => "N",
-              "MENU_CACHE_USE_GROUPS" => "Y",
-              "ROOT_MENU_TYPE" => "top",
-              "USE_EXT" => "N"
-            )
-          ); ?>
-
+          
 
 
 
@@ -171,6 +147,7 @@ IncludeTemplateLangFile(__FILE__);
         </div>
       </div>
     </div>
+    
   </div>
 
   

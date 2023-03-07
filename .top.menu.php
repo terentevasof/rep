@@ -1,36 +1,36 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Главная", 
+		"Home", 
 		"index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Объявления", 
-		"/ads/", 
+		"Properties", 
+		"/properties/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"О сервисе", 
-		"/about-servise/", 
+		"Blog", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Кабинет продавца", 
-		"/seller/", 
+		"Contact", 
+		"/contacts/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Кабинет покупателя", 
-		"/ buyer/", 
+		"About", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
