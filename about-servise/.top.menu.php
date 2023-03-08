@@ -1,8 +1,36 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"test", 
-		"/about-servise/test.php", 
+		"Главная", 
+		"index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Объявления", 
+		"/ads/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О сервисе", 
+		"/about-servise/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Продавец", 
+		"/seller/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Покупатель", 
+		"/shopper/", 
 		Array(), 
 		Array(), 
 		"" 
